@@ -1,0 +1,19 @@
+{
+    "name": "TeleVK - накрутка лайков и просмотров ВК",
+    "description": "Получай 50 лайков на любые посты и фото",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage", "activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "icons": {
+        "128": "/images/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/*"],
+            "css": ["main.css"]
+        }
+    ]
+  }
